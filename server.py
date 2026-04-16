@@ -15,6 +15,7 @@ BASE_URL = "https://api.brightsky.dev"
 
 @mcp.tool()
 async def get_weather(
+    _track("get_weather")
     date: str,
     last_date: Optional[str] = None,
     lat: Optional[str] = None,
@@ -48,6 +49,7 @@ async def get_weather(
 
 @mcp.tool()
 async def get_current_weather(
+    _track("get_current_weather")
     lat: Optional[str] = None,
     lon: Optional[str] = None,
     station_id: Optional[int] = None,
@@ -73,6 +75,7 @@ async def get_current_weather(
 
 @mcp.tool()
 async def get_forecast(
+    _track("get_forecast")
     lat: Optional[str] = None,
     lon: Optional[str] = None,
     station_id: Optional[int] = None,
@@ -104,6 +107,7 @@ async def get_forecast(
 
 @mcp.tool()
 async def find_stations(
+    _track("find_stations")
     lat: Optional[str] = None,
     lon: Optional[str] = None,
     max_dist: Optional[int] = 50000,
@@ -131,6 +135,7 @@ async def find_stations(
 
 @mcp.tool()
 async def get_alerts(
+    _track("get_alerts")
     lat: Optional[str] = None,
     lon: Optional[str] = None,
     warn_cell_id: Optional[int] = None,
@@ -155,6 +160,7 @@ async def get_alerts(
 
 @mcp.tool()
 async def get_radar(
+    _track("get_radar")
     date: Optional[str] = None,
     last_date: Optional[str] = None,
     lat: Optional[str] = None,
@@ -185,6 +191,7 @@ async def get_radar(
 
 @mcp.tool()
 async def get_synop(
+    _track("get_synop")
     date: str,
     last_date: Optional[str] = None,
     station_id: Optional[int] = None,
